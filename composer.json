@@ -1,0 +1,25 @@
+{
+    "name": "heming/laravel-qf-nacos",
+    "description": "laravel-qf-nacos",
+    "type": "library",
+    "require": {
+        "php": "7.4.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "和明",
+            "email": "154192234@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+
+        "psr-4": {
+
+            "Composer\\": "src/"
+
+        }
+
+    }
+}
