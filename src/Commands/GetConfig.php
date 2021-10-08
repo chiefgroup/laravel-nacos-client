@@ -1,10 +1,10 @@
 <?php
 
-namespace Donjan\AcmClient\Commands;
+namespace Donjan\NacosClient\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use Donjan\AcmClient\NacosClient;
+use Donjan\NacosClient\NacosClient;
 
 class GetConfig extends Command
 {
