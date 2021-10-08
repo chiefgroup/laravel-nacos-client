@@ -29,4 +29,19 @@ class NacosServiceProvider extends ServiceProvider
         }
     }
 
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $provides = [
+            'Donjan\NacosClient\Providers\NacosServiceProvider',
+        ];
+
+        foreach ($provides as $provider) {
+            $this->app->register($provider);
+        }
+    }
 }
