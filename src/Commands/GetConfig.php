@@ -16,7 +16,7 @@ class GetConfig extends Command
     public function handle(Filesystem $filesystem)
     {
         Artisan::call('config:clear');
-        $nacosClient = new NacosClient();
+        $nacosClient = new NacosClient(config('nacos.base_url'), config('nacos.port'), config('nacos.guzzle.config'));
         $dataId    = config('nacos.data_id');
         $group     = config('nacos.group');
         $namespace = config('nacos.namespace');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Donjan\AcmClient;
+namespace Donjan\NacosClient;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
@@ -8,10 +8,14 @@ use GuzzleHttp\RequestOptions;
 class NacosClient
 {
 
+    private $baseUrl = '';
 
-    public function __construct()
+    private $guzzle = '';
+
+    public function __construct($base_url, $port, $guzzle)
     {
-
+        $this->baseUrl = $base_url.'::'.$port;
+        $this->guzzle = $guzzle;
     }
 
     /**
@@ -69,8 +73,8 @@ class NacosClient
      */
     public function client(): Client
     {
-        $config = array_merge(config('nacos.guzzle.config'), [
-            'base_uri' => config('nacos.base_url'),
+        $config = array_merge($this->guzzle, [
+            'base_uri' => $this->baseUrl,
         ]);
 
         return new Client($config);
