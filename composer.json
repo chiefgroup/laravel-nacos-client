@@ -3,7 +3,8 @@
     "description": "laravel-qf-nacos",
     "type": "library",
     "require": {
-        "php": "7.4.*"
+        "php": "7.4.*",
+        "guzzlehttp/guzzle": ">=6.3"
     },
     "license": "MIT",
     "authors": [
@@ -14,12 +15,8 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-
         "psr-4": {
-
-            "Composer\\": "src/"
-
+            "Donjan\\NacosClient\\": "src"
         }
-
     }
 }
