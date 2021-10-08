@@ -18,5 +18,12 @@
         "psr-4": {
             "Donjan\\NacosClient\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Donjan\\NacosClient\\Providers\\NacosServiceProvider"
+            ]
+        }
     }
 }
