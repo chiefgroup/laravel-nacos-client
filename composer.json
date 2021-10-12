@@ -2,38 +2,31 @@
     "name": "chiefgroup/laravel-nacos-client",
     "type": "library",
     "license": "MIT",
-    "description": "",
+    "description": "laravel-nacos-client",
     "authors": [
         {
             "name": "observer",
             "email": "sxpd7788@gmail.com"
         }
     ],
-    
     "require": {
-        
-    },
-    "require-dev": {
-        
-    },
-    "config": {
-        "sort-packages": true
+        "guzzlehttp/guzzle": ">=6.3"
     },
     "extra": {
         "laravel": {
-            "providers": [],
+            "providers": [
+                "Donjan\\NacosClient\\Providers\\NacosServiceProvider"
+            ],
             "aliases": {}
         }
     },
     "autoload": {
         "psr-4": {
-            "ChiefGroup\\LaravelNacosClient\\": "src/"
+            "Donjan\\AcmClient\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "ChiefGroup\\LaravelNacosClient\\Tests\\": "tests/"
-        }
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true
