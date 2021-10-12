@@ -10,11 +10,12 @@
         }
     ],
     "require": {
+        "php": ">=7.2",
         "guzzlehttp/guzzle": ">=6.3"
     },
     "autoload": {
         "psr-4": {
-            "Donjan\\AcmClient\\": "src"
+            "Donjan\\NacosClient\\": "src"
         }
     },
     "extra": {
@@ -29,5 +30,4 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-
 }
