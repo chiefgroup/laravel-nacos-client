@@ -14,7 +14,7 @@ class NacosClient
 
     public function __construct($base_url, $port, $guzzle)
     {
-        $this->baseUrl = $base_url.'::'.$port;
+        $this->baseUrl = $base_url.':'.$port;
         $this->guzzle = $guzzle;
     }
 
