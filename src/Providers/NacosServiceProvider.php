@@ -17,7 +17,7 @@ class NacosServiceProvider extends ServiceProvider
     public function boot(Filesystem $filesystem)
     {
         if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__ . '/../config/nacos.php' => config_path('nacos.php')], 'nacos');
+            $this->publishes([__DIR__ . '/../../config/nacos.php' => config_path('nacos.php')], 'nacos');
             $this->commands([
                 GetConfig::class
             ]);
