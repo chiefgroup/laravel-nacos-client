@@ -5,6 +5,7 @@ namespace Donjan\NacosClient\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Donjan\NacosClient\NacosClient;
+use Illuminate\Support\Facades\Artisan;
 
 class GetConfig extends Command
 {
