@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Donjan\\NacosClient\\": "src"
+            "ChiefGroup\\NacosClient\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Donjan\\NacosClient\\Providers\\NacosServiceProvider"
+                "ChiefGroup\\NacosClient\\Providers\\NacosServiceProvider"
             ]
         }
     },

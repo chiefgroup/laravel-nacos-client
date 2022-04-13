@@ -1,6 +1,6 @@
 <?php
 
-namespace Donjan\NacosClient;
+namespace ChiefGroup\NacosClient;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Donjan\NacosClient\Providers;
+namespace ChiefGroup\NacosClient\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Filesystem\Filesystem;
-use Donjan\NacosClient\Commands\GetConfig;
+use ChiefGroup\NacosClient\Commands\GetConfig;
 
 class NacosServiceProvider extends ServiceProvider
 {
