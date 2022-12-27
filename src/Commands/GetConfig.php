@@ -12,7 +12,7 @@ class GetConfig extends Command
 
     protected $signature = 'nacos:get-config';
 
-    protected $description = 'get config from aliyun nacos';
+    protected $description = 'get config from nacos';
 
     public function handle(Filesystem $filesystem)
     {
@@ -26,10 +26,10 @@ class GetConfig extends Command
 
         if (!empty($config)) {
             $filesystem->put(config('nacos.path'), $config);
-
-            $this->info('nacos.success');
+            config($config);
             Artisan::call('config:cache');
         }
+        return 0;
     }
 
 }
