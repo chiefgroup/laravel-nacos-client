@@ -73,7 +73,10 @@ class NacosClient
      */
     public function client(): Client
     {
-        $config = array_merge($this->guzzle, [
+        $config = array_merge([
+            'connect_timeout' => 3,
+            'timeout' => 10,
+        ], $this->guzzle, [
             'base_uri' => $this->baseUrl,
         ]);
 

@@ -5,6 +5,7 @@ namespace ChiefGroup\NacosClient\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Filesystem\Filesystem;
 use ChiefGroup\NacosClient\Commands\GetConfig;
+use ChiefGroup\NacosClient\NacosClient;
 
 class NacosServiceProvider extends ServiceProvider
 {
@@ -41,6 +42,14 @@ class NacosServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../../config/nacos.php', 'nacos'
         );
+
+        $this->app->bind(NacosClient::class, function ($app) {
+            return new NacosClient(
+                $app['config']->get('nacos.base_url'),
+                $app['config']->get('nacos.url_port'),
+                $app['config']->get('nacos.guzzle.config')
+            );
+        });
     }
 
 }

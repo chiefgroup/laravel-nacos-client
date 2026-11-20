@@ -13,6 +13,10 @@
         //相关配置信息
         'guzzle'   => [
             'config' => [
+                //连接超时（秒）
+                'connect_timeout' => 3,
+                //请求超时（秒）
+                'timeout' => 10,
                 'headers' => [
                     'charset' => 'UTF-8',
                 ],
